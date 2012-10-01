@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121001174423) do
+ActiveRecord::Schema.define(:version => 20121001175620) do
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.integer  "kindergarten_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "groups", ["kindergarten_id"], :name => "index_groups_on_kindergarten_id"
 
   create_table "kindergartens", :force => true do |t|
     t.string   "name"
