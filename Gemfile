@@ -13,7 +13,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :test do
+group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails', require: false
