@@ -6,6 +6,9 @@ gem 'sqlite3'
 # JavaScript
 gem 'jquery-rails'
 
+# controller magic
+gem 'inherited_resources'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
