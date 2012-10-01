@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/delicious-development/rack-chuck.git
+  revision: f0f4eda3663afc441dec9ce70ac6e62ce4eb1891
+  specs:
+    rack-chuck (0.0.2)
+      rack (>= 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -137,6 +144,7 @@ DEPENDENCIES
   factory_girl_rails
   inherited_resources
   jquery-rails
+  rack-chuck!
   rails (= 3.2.8)
   rspec-rails
   sass-rails (~> 3.2.3)
