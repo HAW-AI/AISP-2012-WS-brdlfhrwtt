@@ -1,4 +1,4 @@
 rvm:
   - 1.9.3
 script:
-  - rspec
+  - rake db:migrate && rake spec
