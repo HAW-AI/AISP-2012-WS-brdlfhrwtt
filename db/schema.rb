@@ -11,12 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121018140518) do
+ActiveRecord::Schema.define(:version => 20121018141239) do
 
   create_table "children", :force => true do |t|
     t.string   "nick"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "firstname"
+    t.string   "lastname"
   end
 
   create_table "children_groups", :id => false, :force => true do |t|
