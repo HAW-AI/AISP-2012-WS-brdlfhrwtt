@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121018142847) do
+ActiveRecord::Schema.define(:version => 20121018143951) do
 
   create_table "children", :force => true do |t|
     t.string   "nick"
@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(:version => 20121018142847) do
   end
 
   create_table "children_groups", :id => false, :force => true do |t|
-    t.integer "children_id"
-    t.integer "groups_id"
+    t.integer  "children_id"
+    t.integer  "groups_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "children_groups", ["children_id", "groups_id"], :name => "index_children_groups_on_children_id_and_groups_id"
