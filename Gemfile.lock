@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/delicious-development/rack-chuck.git
+  remote: https://github.com/delicious-development/rack-chuck.git
   revision: f0f4eda3663afc441dec9ce70ac6e62ce4eb1891
   specs:
     rack-chuck (0.0.2)
@@ -53,6 +53,12 @@ GEM
     factory_girl_rails (4.1.0)
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
+    guard (1.4.0)
+      listen (>= 0.4.2)
+      thor (>= 0.14.6)
+    guard-rspec (2.1.0)
+      guard (>= 1.1)
+      rspec (~> 2.11)
     has_scope (0.5.1)
     hike (1.2.1)
     i18n (0.6.1)
@@ -65,6 +71,7 @@ GEM
       thor (~> 0.14)
     json (1.7.5)
     libv8 (3.3.10.4)
+    listen (0.5.3)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -95,6 +102,7 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (0.9.2.2)
+    rb-fsevent (0.9.2)
     rdoc (3.12)
       json (~> 1.4)
     responders (0.9.3)
@@ -112,6 +120,7 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.11.0)
+    ruby_gntp (0.3.4)
     sass (3.2.1)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -142,11 +151,15 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   factory_girl_rails
+  guard
+  guard-rspec
   inherited_resources
   jquery-rails
   rack-chuck!
   rails (= 3.2.8)
+  rb-fsevent
   rspec-rails
+  ruby_gntp
   sass-rails (~> 3.2.3)
   shoulda-matchers
   sqlite3

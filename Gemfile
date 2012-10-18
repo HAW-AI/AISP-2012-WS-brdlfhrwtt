@@ -22,3 +22,10 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails'
 end
+
+group :development do
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'rb-fsevent', :require => false
+  gem 'ruby_gntp'
+end
