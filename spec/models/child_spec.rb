@@ -7,4 +7,5 @@ describe Child do
   it { should have_attribute :lastname }
   it { should have_attribute :gender }
   it { should have_attribute :disability }
+  it { should have_attribute :born_at }
 end
