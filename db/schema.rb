@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121018145806) do
+ActiveRecord::Schema.define(:version => 20121018150515) do
 
   create_table "children", :force => true do |t|
     t.string   "nick"
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(:version => 20121018145806) do
 
   create_table "kindergartens", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "waitlists", :force => true do |t|
+    t.integer  "group_id"
+    t.integer  "child_id"
+    t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

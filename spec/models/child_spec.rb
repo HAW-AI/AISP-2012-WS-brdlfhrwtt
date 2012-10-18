@@ -9,4 +9,5 @@ describe Child do
   it { should have_attribute :born_at }
   it { should have_many :groups }
   it { should have_many :children_groups }
+  it { should have_many :waitlists }
 end
