@@ -8,7 +8,7 @@ gem 'jquery-rails'
 
 # controller magic
 gem 'inherited_resources'
-gem 'rack-chuck', github: 'delicious-development/rack-chuck'
+gem 'rack-chuck', git: 'https://github.com/delicious-development/rack-chuck.git'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
