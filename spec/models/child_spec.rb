@@ -10,4 +10,5 @@ describe Child do
   it { should have_many :groups }
   it { should have_many :children_groups }
   it { should have_many :waitlists }
+  it { should belong_to :parent }
 end

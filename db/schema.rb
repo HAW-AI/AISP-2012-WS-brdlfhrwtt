@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121018150515) do
+ActiveRecord::Schema.define(:version => 20121018154549) do
 
   create_table "children", :force => true do |t|
     t.string   "nick"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20121018150515) do
     t.string   "gender"
     t.boolean  "disability", :default => false
     t.datetime "born_at"
+    t.integer  "parent_id"
   end
 
   create_table "children_groups", :id => false, :force => true do |t|
@@ -47,6 +48,12 @@ ActiveRecord::Schema.define(:version => 20121018150515) do
   add_index "groups", ["kindergarten_id"], :name => "index_groups_on_kindergarten_id"
 
   create_table "kindergartens", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "parents", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
