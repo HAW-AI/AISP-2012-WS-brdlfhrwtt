@@ -1,5 +1,5 @@
 class Group < ActiveRecord::Base
+  has_many :children_groups
+  has_many :children, :through => :children_groups
   belongs_to :kindergarten
-  has_and_belongs_to_many :children
-  attr_accessible :name
 end

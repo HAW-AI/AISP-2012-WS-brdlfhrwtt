@@ -1,4 +1,5 @@
 class Child < ActiveRecord::Base
-  has_and_belongs_to_many :groups
+  has_many :children_groups
+  has_many :groups, :through => :children_groups
   attr_accessible :name
 end
