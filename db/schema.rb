@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121018141641) do
+ActiveRecord::Schema.define(:version => 20121018141956) do
 
   create_table "children", :force => true do |t|
     t.string   "nick"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "firstname"
     t.string   "lastname"
     t.string   "gender"
+    t.boolean  "disability", :default => false
   end
 
   create_table "children_groups", :id => false, :force => true do |t|
