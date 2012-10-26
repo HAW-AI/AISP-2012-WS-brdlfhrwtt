@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121026113028) do
+ActiveRecord::Schema.define(:version => 20121026120050) do
+
+  create_table "accounts", :force => true do |t|
+    t.boolean  "day_care_coupon"
+    t.integer  "child_id"
+    t.integer  "net_income"
+    t.integer  "person_count"
+    t.integer  "child_count"
+    t.integer  "birth_sequence_position"
+    t.boolean  "free_preschool_year"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
 
   create_table "children", :force => true do |t|
     t.string   "nick"
