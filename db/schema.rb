@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121018154549) do
+ActiveRecord::Schema.define(:version => 20121026113028) do
 
   create_table "children", :force => true do |t|
     t.string   "nick"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(:version => 20121018154549) do
   add_index "children_groups", ["child_id", "group_id"], :name => "index_children_groups_on_children_id_and_groups_id"
   add_index "children_groups", ["group_id", "child_id"], :name => "index_children_groups_on_groups_id_and_children_id"
 
+  create_table "fees", :force => true do |t|
+    t.integer  "care_time"
+    t.datetime "valid_at"
+    t.integer  "max_age"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "groups", :force => true do |t|
     t.string   "name"
     t.integer  "kindergarten_id"
@@ -57,6 +65,17 @@ ActiveRecord::Schema.define(:version => 20121018154549) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "rates", :force => true do |t|
+    t.integer  "net_income"
+    t.integer  "two_people"
+    t.integer  "three_people"
+    t.integer  "four_people"
+    t.integer  "five_people"
+    t.integer  "six_people"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "waitlists", :force => true do |t|
