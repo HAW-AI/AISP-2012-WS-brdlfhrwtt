@@ -4,4 +4,8 @@ class Child < ActiveRecord::Base
   has_many :waitlists
   belongs_to :parent
   attr_accessible :name
+
+  validates :nick, presence: true
+  validates :firstname, presence: true
+  validates :lastname, presence: true
 end

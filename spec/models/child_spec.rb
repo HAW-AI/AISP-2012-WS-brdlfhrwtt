@@ -11,4 +11,11 @@ describe Child do
   it { should have_many :children_groups }
   it { should have_many :waitlists }
   it { should belong_to :parent }
+
+  [:nick, :firstname, :lastname].each do |key|
+    it { should allow_value("Peter").for(key) }
+    it { should_not allow_value("").for(key) }
+  end
+
+  it "should validate :gender"
 end
