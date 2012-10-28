@@ -1,4 +1,25 @@
 
 de:
   fees:
-    title: 'Beitragstabelle'
+    index:
+      title: 'Beitragstabelle'
+      care_time: 'Betreungszeit: '
+      max_age:
+  activerecord:
+    models:
+      fee: Beitragstabelle
+    attributes:
+      fee:
+        valid_at: 'Gültig seit'
+        care_time: 'Betreungszeit'
+        max_age: 'Höchstalter'
+  helper:
+    in_hours:
+      one: 'eine Stunde'
+      other: '%{count} Stunden'
+    in_years:
+      one: 'ein Jahr'
+      other: '%{count} Jahre'
+    actions:
+      edit: 'Bearbeiten'
+

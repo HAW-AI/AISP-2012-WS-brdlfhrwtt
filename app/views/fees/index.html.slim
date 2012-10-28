@@ -1,0 +1,18 @@
+h1= Fee.model_name.human
+
+= action_on :fee, :new
+
+table
+  thead
+    tr
+      th= Fee.human_attribute_name(:valid_at)
+      th= Fee.human_attribute_name(:care_time)
+      th= Fee.human_attribute_name(:max_age)
+      td
+  tbody
+    - @fees.each do |fee|
+      tr
+        td.date= time_tag fee.valid_at
+        td.number= in_hours fee.care_time
+        td.number= in_years fee.max_age
+        td.acctions= action_on fee, :edit
