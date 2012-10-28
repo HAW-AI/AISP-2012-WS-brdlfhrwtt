@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :kindergarten do
-    name "MyString"
+    name "Wiesenhof"
   end
 end

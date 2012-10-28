@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :group do
-    name "MyString"
-    kindergarten nil
+    name "Pferdchen"
+    kindergarten
+    limit { rand(1..40) }
   end
 end

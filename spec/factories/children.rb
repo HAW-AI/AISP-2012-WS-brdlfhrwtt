@@ -2,6 +2,8 @@
 
 FactoryGirl.define do
   factory :child do
-    name "MyString"
+    nick "Peter"
+    firstname "Peter"
+    lastname "Lustig"
   end
 end

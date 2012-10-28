@@ -3,11 +3,11 @@
 FactoryGirl.define do
   factory :account do
     day_care_coupon false
-    child ""
-    net_income 1
-    person_count 1
-    child_count 1
-    birth_sequence_position ""
+    child
+    net_income { Kernel.rand(1000..3000) }
+    person_count {|a| a.child_count + Kernel.rand(1..2) }
+    child_count { Kernel.rand(1..3) }
+    birth_sequence_position {|a| Kernel.rand(1..a.child_count) }
     free_preschool_year false
   end
 end
