@@ -6,6 +6,8 @@ gem 'sqlite3'
 # JavaScript
 gem 'jquery-rails'
 
+gem 'slim' # template engine
+
 # controller magic
 gem 'inherited_resources'
 gem 'rack-chuck', git: 'https://github.com/delicious-development/rack-chuck.git'
