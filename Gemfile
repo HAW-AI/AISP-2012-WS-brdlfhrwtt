@@ -11,6 +11,8 @@ gem 'slim-rails' # template engine
 
 gem 'bourbon' # SASS-helper
 
+gem 'simple_form'
+
 # controller magic
 gem 'inherited_resources'
 gem 'rack-chuck', git: 'https://github.com/delicious-development/rack-chuck.git'
