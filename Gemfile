@@ -15,6 +15,8 @@ gem 'bourbon' # SASS-helper
 gem 'inherited_resources'
 gem 'rack-chuck', git: 'https://github.com/delicious-development/rack-chuck.git'
 
+gem 'date_validator' # easy date validation
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

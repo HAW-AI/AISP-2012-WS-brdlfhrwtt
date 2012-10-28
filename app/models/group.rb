@@ -6,4 +6,6 @@ class Group < ActiveRecord::Base
 
   validates :name, presence: true
   validates :limit, numericality: { greater_than_or_equal_to: 1 }
+  validates :starts_on, date: { before: :ends_on }
+  validates :ends_on, date: { after: :starts_on }
 end
