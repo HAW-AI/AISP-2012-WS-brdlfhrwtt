@@ -32,5 +32,7 @@ module Delens
     config.assets.version = '1.0'
 
     config.middleware.use Rack::Chuck
+
+    config.i18n.default_locale = :de
   end
 end
