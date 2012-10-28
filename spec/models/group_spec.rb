@@ -19,25 +19,26 @@ describe Group do
 
   # ruby time includes date, sadly. comparing times from the db is safe, tough
   # because they will have the same dummy date (http://www.rebeccablyth.co.uk/2008/01/03/time-columns-and-rails/)
-  describe "starts_on should be greater then ends_on" do
-    early_time = Time.new(2012, 1, 1, 8)
-    late_time = Time.new(2012, 1, 1, 10)
+  describe "should be" do
+    early_time = Time.parse("8:00")
+    late_time = Time.parse("10:00")
 
-    [["with starts_on < ends_on", early_time, late_time, true],
-     ["with starts_on > ends_on", late_time, early_time, false],
-     ["with starts_on = ends_on", early_time, early_time, false]
-    ].each do |test|
-      descr, starts_on, ends_on, res = test
+    describe "valid when starts_on < ends_on" do
+      subject { FactoryGirl.build(:group, { starts_on: early_time, ends_on: late_time } )}
+      it { should have(0).error_on(:starts_on) }
+      it { should have(0).error_on(:ends_on) }
+    end
 
-      describe descr do
-        group = Group.new
-        group.starts_on = starts_on
-        group.ends_on = ends_on
+    context "invalid" do
+      [["when starts_on > ends_on", late_time, early_time, false],
+       ["when starts_on = ends_on", early_time, early_time, false]
+      ].each do |description, starts_on, ends_on, res|
+        context description do
+          subject { FactoryGirl.build(:group, { starts_on: starts_on, ends_on: ends_on } )}
 
-        group.valid?
-
-        specify { group.errors[:starts_on].blank?.should == res }
-        specify { group.errors[:ends_on].blank?.should == res }
+          it { should have(1).error_on(:starts_on) }
+          it { should have(1).error_on(:ends_on) }
+        end
       end
     end
   end
