@@ -1,13 +1,13 @@
-html html5
-  head
-    title Delens
-    = stylesheet_link_tag 'application', :media => 'all'
-    = javascript_include_tag 'application'
-    = csrf_meta_tags
+doctype html
+head
+  title Delens
+  = stylesheet_link_tag 'application', :media => 'all'
+  = javascript_include_tag 'application'
+  = csrf_meta_tags
 
-  body
-    header
-      h1=t('Delens')
+body
+  header
+    h1=t('Delens')
 
-    #content
-      == yield
+  #content
+    = yield
