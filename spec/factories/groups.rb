@@ -2,8 +2,13 @@
 
 FactoryGirl.define do
   factory :group do
-    name "Pferdchen"
+    name { Faker::Product::brand }
     kindergarten
     limit { rand(1..40) }
+
+    ignore do child_count 1 end
+    after(:create) do |group, evaluator|
+      FactoryGirl.build_list(:child, evaluator.child_count, groups: [group])
+    end
   end
 end
