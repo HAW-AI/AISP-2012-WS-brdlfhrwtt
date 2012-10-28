@@ -1,2 +1,2 @@
-class FeesController < ApplicationController
+class FeesController < ResourceController
 end

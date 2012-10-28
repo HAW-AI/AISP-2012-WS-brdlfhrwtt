@@ -1,2 +1,2 @@
-class KindergartensController < ApplicationController
+class KindergartensController < ResourceController
 end

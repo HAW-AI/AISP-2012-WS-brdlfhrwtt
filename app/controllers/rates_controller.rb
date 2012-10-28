@@ -1,2 +1,2 @@
-class RatesController < ApplicationController
+class RatesController < ResourceController
 end

@@ -1,2 +1,2 @@
-class GroupsController < ApplicationController
+class GroupsController < ResourceController
 end

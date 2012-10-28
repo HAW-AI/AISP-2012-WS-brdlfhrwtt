@@ -1,2 +1,2 @@
-class ChildrenController < ApplicationController
+class ChildrenController < ResourceController
 end
