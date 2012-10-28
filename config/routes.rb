@@ -4,5 +4,7 @@ Delens::Application.routes.draw do
       resources :children
     end
   end
-  resources :children
+
+  resources :fees
+  root to: 'fees#index'
 end
