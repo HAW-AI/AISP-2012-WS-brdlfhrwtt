@@ -1,0 +1,13 @@
+a.action {
+  @include button(pill);
+  &,&:hover,&:visited,&:active {
+    text-decoration: none;
+  }
+
+  // &.delete {
+  //   @include button(pill, #CD0000);
+  // }
+  // &.new {
+  //   @include button(pill, #42CD00);
+  // }
+}
