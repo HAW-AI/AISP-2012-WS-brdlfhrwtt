@@ -11,3 +11,6 @@ a.action {
   //   @include button(pill, #42CD00);
   // }
 }
+input[type=submit], input[type=reset] {
+  @include button(pill);
+}
