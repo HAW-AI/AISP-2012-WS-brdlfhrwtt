@@ -12,7 +12,7 @@ table
   tbody
     - @fees.each do |fee|
       tr
-        td.date= time_tag fee.valid_at
+        td.date= time_tag fee.valid_at.to_date
         td.number= in_hours fee.care_time
         td.number= in_years fee.max_age
         td.acctions= action_on fee, :edit

@@ -14,6 +14,7 @@ module ApplicationHelper
       :"helper.actions.#{model_name.downcase}.#{action}",
       :"helper.actions.#{action}"
     ]
+    action = nil if action == :index
     link_to t(defaults.shift, default: defaults), [action, *resources], class: ['action', action].join(' ')
   end
 
