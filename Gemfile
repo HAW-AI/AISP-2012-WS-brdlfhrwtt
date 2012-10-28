@@ -6,7 +6,7 @@ gem 'sqlite3'
 # JavaScript
 gem 'jquery-rails'
 
-gem 'slim' # template engine
+gem 'slim-rails' # template engine
 
 # controller magic
 gem 'inherited_resources'
