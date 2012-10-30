@@ -2,9 +2,29 @@ h1= Fee.model_name.human
 
 = action_on :fees, :index
 
-= simple_form_for @fee do |f|
-  = f.input :valid_at
-  = f.input :care_time
-  = f.input :max_age
+= simple_form_for @fee do |form|
+  = form.input :valid_at
+  = form.input :care_time
+  = form.input :max_age
 
-  = f.submit
+  = form.submit
+
+  table
+    thead
+      th= Rate.human_attribute_name(:net_income)
+      th= Rate.human_attribute_name(:two_people)
+      th= Rate.human_attribute_name(:three_people)
+      th= Rate.human_attribute_name(:four_people)
+      th= Rate.human_attribute_name(:five_people)
+      th= Rate.human_attribute_name(:six_people)
+    tbody
+      = form.simple_fields_for :rates do |rate|
+        tr
+          td= rate.input :net_income, label: false
+          td= rate.input :two_people, label: false
+          td= rate.input :three_people, label: false
+          td= rate.input :four_people, label: false
+          td= rate.input :five_people, label: false
+          td= rate.input :six_people, label: false
+
+  = form.submit
