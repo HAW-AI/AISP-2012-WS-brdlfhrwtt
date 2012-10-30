@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121026120050) do
+ActiveRecord::Schema.define(:version => 20121030114327) do
 
   create_table "accounts", :force => true do |t|
     t.boolean  "day_care_coupon"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20121026120050) do
     t.integer  "six_people"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "fee_id"
   end
 
   create_table "waitlists", :force => true do |t|
