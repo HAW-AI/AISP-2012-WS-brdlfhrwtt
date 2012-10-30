@@ -12,6 +12,7 @@ gem 'slim-rails' # template engine
 gem 'bourbon' # SASS-helper
 
 gem 'simple_form'
+gem 'nested_form'
 
 # controller magic
 gem 'inherited_resources'
