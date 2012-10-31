@@ -35,6 +35,7 @@ describe Group do
       ].each do |description, starts_on, ends_on, res|
         context description do
           subject { FactoryGirl.build(:group, { starts_on: starts_on, ends_on: ends_on } )}
+          before { subject.valid? }
 
           it { should have(1).error_on(:starts_on) }
           it { should have(1).error_on(:ends_on) }

@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :parent do
-    name "Peter Lustig"
+    name { Faker::Name.name }
   end
 end
