@@ -17,6 +17,12 @@ de:
       title: 'Beitragstabelle'
       care_time: 'Betreungszeit: '
       max_age:
+
+  dashboards:
+    show:
+      title: 'Übersicht'
+      stats: 'Statistik'
+
   activerecord:
     models:
       fee: Beitragstabelle
@@ -51,5 +57,7 @@ de:
         index: Gruppenliste
         new: Gruppe Anlegen
         show: Gruppe Anzeigen
+      child:
+        new: Kind Anlegen
 
 
