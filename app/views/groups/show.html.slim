@@ -7,6 +7,7 @@ ul.overview
     li= link_to child.name, child
 
 h2= Waitlist.model_name.human
+p.detail= t("children", count: @group.waiting_children.count)
 ol.overview
   - @group.waiting_children.each do |child|
     li= link_to child.name, child
