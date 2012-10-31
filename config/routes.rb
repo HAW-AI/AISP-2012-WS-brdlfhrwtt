@@ -6,5 +6,5 @@ Delens::Application.routes.draw do
   end
 
   resources :fees
-  root to: 'fees#index'
+  root to: 'kindergartens#index'
 end
