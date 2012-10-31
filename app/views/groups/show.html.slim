@@ -4,3 +4,8 @@ h2= ChildrenGroup.model_name.human
 ul.overview
   - @group.children.each do |child|
     li= link_to child.name, child
+
+h2 Warteliste (#TODO: translate)
+ol.overview
+  - @group.waiting_children.each do |child|
+    li= link_to child.name, child

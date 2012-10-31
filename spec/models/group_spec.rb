@@ -7,6 +7,7 @@ describe Group do
   it { should have_attribute :ends_on }
   it { should have_many :children }
   it { should have_many :children_groups }
+  it { should have_many :waiting_children }
   it { should have_many :waitlists }
   it { should belong_to :kindergarten }
 

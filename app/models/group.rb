@@ -4,6 +4,7 @@ class Group < ActiveRecord::Base
   has_many :children_groups
   has_many :children, :through => :children_groups
   has_many :waitlists
+  has_many :waiting_children, :through => :waitlists, :source => :child
   belongs_to :kindergarten
 
   validates :name, presence: true
