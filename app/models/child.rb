@@ -9,8 +9,11 @@ class Child < ActiveRecord::Base
   validates :lastname, presence: true
 
   def name
-    full_name << "(#{nick})" if nick.present?
-
+    if nick.present?
+      "#{full_name} (#{nick})"
+    else
+      full_name
+    end
   end
 
   def full_name
