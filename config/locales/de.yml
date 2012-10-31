@@ -26,4 +26,8 @@ de:
       other: '%{count} Jahre'
     actions:
       edit: 'Bearbeiten'
+      kindergarten:
+        index: Kindergartenliste
+        new: Kindergarten Anlegen
+
 
