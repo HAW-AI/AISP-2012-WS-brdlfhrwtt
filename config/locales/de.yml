@@ -12,6 +12,7 @@ de:
       child: Kind
       group: Gruppe
       children_group: Kinder der Gruppe
+      waitlist: Warteliste
     attributes:
       fee:
         valid_at: 'Gültig seit'
