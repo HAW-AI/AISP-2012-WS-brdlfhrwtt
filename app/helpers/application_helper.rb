@@ -11,7 +11,7 @@ module ApplicationHelper
     resource = Array(resources).last
     model_name = resource.is_a?(Symbol) ? resource.to_s : resource.class.model_name
     defaults = [
-      :"helper.actions.#{model_name.downcase}.#{action}",
+      :"helper.actions.#{model_name.downcase.singularize}.#{action}",
       :"helper.actions.#{action}"
     ]
     action = nil if action == :index
