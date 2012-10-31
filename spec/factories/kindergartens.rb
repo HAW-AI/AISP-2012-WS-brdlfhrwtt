@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :kindergarten do
-    name { Faker::Product::product_name }
+    name { Faker::Education::school_name }
 
     ignore do groups_count Kernel.rand(2..7) end
     after(:create) do |kindergarten, evaluator|

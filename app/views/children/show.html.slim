@@ -1,0 +1,20 @@
+h1= @child.nick
+
+dl
+  dt= Child.human_attribute_name :firstname
+  dd= @child.firstname
+
+  dt= Child.human_attribute_name :lastname
+  dd= @child.lastname
+
+  dt= Child.human_attribute_name :born_at
+  dd= @child.born_at
+
+  dt= Child.human_attribute_name :gender
+  dd= @child.gender
+
+  dt= Child.human_attribute_name :disability
+  dd= @child.disability
+
+  dt= Child.human_attribute_name :groups
+  dd= raw @child.groups.map{|g| link_to(g.name, g) }.to_sentence
