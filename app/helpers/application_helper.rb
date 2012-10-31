@@ -7,14 +7,14 @@ module ApplicationHelper
     t('helper.in_hours', count: hours)
   end
 
-  def action_on(resources, action)
+  def action_on(resources, action=:show)
     resource = Array(resources).last
     model_name = resource.is_a?(Symbol) ? resource.to_s : resource.class.model_name
     defaults = [
       :"helper.actions.#{model_name.downcase.singularize}.#{action}",
       :"helper.actions.#{action}"
     ]
-    action = nil if action == :index
+    action = nil if [:index, :show].include? action
     link_to t(defaults.shift, default: defaults), [action, *resources], class: ['action', action].join(' ')
   end
 
