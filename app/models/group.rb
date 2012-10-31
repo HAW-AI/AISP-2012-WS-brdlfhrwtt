@@ -3,9 +3,11 @@ class Group < ActiveRecord::Base
 
   has_many :children_groups
   has_many :children, :through => :children_groups
-  has_many :waitlists
+  has_many :waitlists, :include => :child
   has_many :waiting_children, :through => :waitlists, :source => :child
   belongs_to :kindergarten
+
+  accepts_nested_attributes_for :waitlists
 
   validates :name, presence: true
   validates :limit, numericality: { greater_than_or_equal_to: 1 }

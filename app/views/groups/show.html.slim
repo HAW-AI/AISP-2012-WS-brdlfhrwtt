@@ -7,6 +7,12 @@ ul.overview
     li= link_to child.name, child
 
 h2= Waitlist.model_name.human
-ol.overview
-  - @group.waiting_children.each do |child|
-    li= link_to child.name, child
+= simple_form_for @group do |form|
+  ol.overview
+      = form.simple_fields_for :waitlists do |waitlist_form|
+        = link_to waitlist_form.object.child.name, waitlist_form.object.child
+        span Verschieben auf Platz #{waitlist_form.input :position, label: false} (bisheriger Platzhalter fällt nach hinten)
+        br
+
+  = form.submit
+
