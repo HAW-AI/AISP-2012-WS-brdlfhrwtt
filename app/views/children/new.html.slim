@@ -8,7 +8,7 @@ h1= Child.model_name.human
   = f.input :lastname
   = f.input :nick
   = f.input :gender
-  = f.input :born_at
+  = f.input :born_at, :start_year => Date.today.year - 40
   = f.input :disability
 
   = f.submit
