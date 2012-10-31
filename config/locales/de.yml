@@ -9,6 +9,9 @@ de:
   activerecord:
     models:
       fee: Beitragstabelle
+      child: Kind
+      group: Gruppe
+      children_group: Kinder der Gruppe
     attributes:
       fee:
         valid_at: 'Gültig seit'
