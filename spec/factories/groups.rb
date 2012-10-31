@@ -9,7 +9,7 @@ FactoryGirl.define do
     ends_on { starts_on + (Kernel.rand(5)+3).hours }
 
     ignore do child_count 1 end
-    after(:create) do |group, evaluator|
+    after(:build) do |group, evaluator|
       FactoryGirl.build_list(:child, evaluator.child_count, groups: [group])
     end
   end
