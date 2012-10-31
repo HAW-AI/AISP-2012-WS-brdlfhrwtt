@@ -1,5 +1,6 @@
 Delens::Application.routes.draw do
   resource :dashboard
+  resources :accounts
   resources :children, only: [:new, :create, :show]
 
   resources :kindergartens, shallow: true do

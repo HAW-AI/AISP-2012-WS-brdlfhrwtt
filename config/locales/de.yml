@@ -25,11 +25,12 @@ de:
 
   activerecord:
     models:
-      fee: Beitragstabelle
-      child: Kind
-      group: Gruppe
-      children_group: Kinder der Gruppe
-      waitlist: Warteliste
+      account: 'Abrechnung'
+      fee: 'Beitragstabelle'
+      child: 'Kind'
+      group: 'Gruppe'
+      children_group: 'Kinder der Gruppe'
+      waitlist: 'Warteliste'
     attributes:
       fee:
         valid_at: 'Gültig seit'
@@ -41,6 +42,14 @@ de:
         nick: 'Spitzname (Rufname)'
         born_at: 'Geburtstag'
         disability: 'Behinderung'
+      account:
+        day_care_coupon: 'Kitagutschein'
+        child: 'Kind'
+        net_income: 'Netto Einkommen'
+        person_count: 'Personen im Haushalt'
+        child_count: 'Kinder im Haushalt'
+        birth_sequence_position: 'Rang in Geburtenfolge'
+        free_preschool_year: 'Kostenloses Vorschuljahr'
 
   errors:
     messages:
@@ -65,5 +74,8 @@ de:
         show: Gruppe Anzeigen
       child:
         new: Kind Anlegen
+      account:
+        index: Abrechnungen
+        new: Abrechnung Anlegen
 
 

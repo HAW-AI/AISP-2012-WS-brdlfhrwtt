@@ -1,0 +1,15 @@
+h1= Account.model_name.human
+
+- content_for :sidebar do
+  = action_on :accounts, :index
+
+= simple_form_for @account do |f|
+  = f.association :child
+  = f.input :net_income
+  = f.input :person_count
+  = f.input :child_count
+  = f.input :birth_sequence_position
+  = f.input :day_care_coupon
+  = f.input :free_preschool_year
+
+  = f.submit
