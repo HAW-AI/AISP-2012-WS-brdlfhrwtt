@@ -12,5 +12,10 @@ FactoryGirl.define do
     after(:create) do |group, evaluator|
       FactoryGirl.create_list(:child, evaluator.child_count, groups: [group])
     end
+
+    ignore do waitlist_count Kernel.rand(2..23) end
+    after(:create) do |group, evaluator|
+      FactoryGirl.create_list(:waitlist, evaluator.waitlist_count, group: group)
+    end
   end
 end
