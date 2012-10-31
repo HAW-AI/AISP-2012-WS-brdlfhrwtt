@@ -7,4 +7,13 @@ class Child < ActiveRecord::Base
   validates :nick, presence: true
   validates :firstname, presence: true
   validates :lastname, presence: true
+
+  def name
+    full_name << "(#{nick})" if nick.present?
+
+  end
+
+  def full_name
+    [lastname, firstname].join(', ')
+  end
 end
