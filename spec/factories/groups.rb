@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :group do
-    name { Faker::Product::brand }
+    name { Faker::Education::degree }
     kindergarten
     limit { Kernel.rand(1..40) }
     starts_on { Time.parse(['6:00', '6:30', '7:00', '8:00'].sample) }
