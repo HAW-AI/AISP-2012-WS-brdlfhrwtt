@@ -3,4 +3,4 @@ h1 #{@group.name} - #{link_to @kindergarten.name, @kindergarten}
 h2= ChildrenGroup.model_name.human
 ul
   - @group.children.each do |child|
-    link_to child.name, child
+    li= link_to child.name, child
