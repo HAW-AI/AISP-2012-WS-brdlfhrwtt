@@ -4,3 +4,12 @@
 body {
   font-family: $lucida-grande;
 }
+a {
+  &,&:hover,&:active,&:visited {
+    text-decoration: none;
+    color: rgba(32,124,229,1);
+  }
+}
+h1,h2,h3,h4,h5 {
+  color: #363636;
+}

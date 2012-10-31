@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'slim-rails' # template engine
 
 gem 'bourbon' # SASS-helper
+gem 'neat'
 
 gem 'simple_form'
 gem 'nested_form'

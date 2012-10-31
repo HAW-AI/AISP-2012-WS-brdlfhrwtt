@@ -1,3 +1,15 @@
+#content {
+  @include outer-container;
+
+  & > article {
+    @include span-columns(9);
+  }
+  & > aside {
+    @include span-columns(3);
+    padding-top: 3em;
+  }
+}
+
 body {
   margin-top: 120px;
 
@@ -25,4 +37,3 @@ body {
     }
   }
 }
-

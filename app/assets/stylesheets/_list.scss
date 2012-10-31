@@ -1,0 +1,18 @@
+.overview {
+  padding: 0;
+
+  li {
+    font-size: 120%;
+    line-height: 150%;
+    list-style: none;
+    border-top: 1px solid rgba(32,124,229,1);
+    padding: 0.5em 1em;
+    background: rgba(32,124,229,0.1);
+    &:hover {
+      background: rgba(32,124,229,0.2);
+    }
+    a {
+      display:block;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 h1= Fee.model_name.human
 
-= action_on :fees, :index
+- content_for :sidebar do
+  = action_on :fees, :index
 
 = simple_form_for @fee do |form|
   = form.input :valid_at
