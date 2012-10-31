@@ -35,6 +35,12 @@ de:
         valid_at: 'Gültig seit'
         care_time: 'Betreungszeit'
         max_age: 'Höchstalter'
+      child:
+        firstname: 'Vorname'
+        lastname: 'Nachname'
+        nick: 'Spitzname (Rufname)'
+        born_at: 'Geburtstag'
+        disability: 'Behinderung'
 
   errors:
     messages:

@@ -2,6 +2,7 @@ h1= Kindergarten.model_name.human
 
 - content_for :sidebar do
   = action_on :kindergarten, :new
+  = action_on :child, :new
 
 p.detail= t("kindergartens", count: @kindergartens.count)
 ul.overview

@@ -1,0 +1,14 @@
+h1= Child.model_name.human
+
+- content_for :sidebar do
+  = action_on :kindergartens, :index
+
+= simple_form_for @child do |f|
+  = f.input :firstname
+  = f.input :lastname
+  = f.input :nick
+  = f.input :gender
+  = f.input :born_at
+  = f.input :disability
+
+  = f.submit
