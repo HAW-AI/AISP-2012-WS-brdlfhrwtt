@@ -1,0 +1,7 @@
+h1= Kindergarten.model_name.human
+
+h2= Group.model_name.human
+=action_on [@kindergarten, :group], :new
+ul
+  - @kindergarten.groups.each do |group|
+    li= link_to group.name, group
