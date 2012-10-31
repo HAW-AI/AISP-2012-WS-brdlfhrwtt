@@ -1,0 +1,12 @@
+h1= t('.title')
+
+- content_for :sidebar do
+  = action_on :kindergartens, :index
+  = action_on :kindergarten, :new
+  = action_on :child, :new
+
+h2= t('.stats')
+ul
+  li= t('kindergartens', count: Kindergarten.count)
+  li= t('groups', count: Group.count)
+  li= t('children', count: Child.count)
