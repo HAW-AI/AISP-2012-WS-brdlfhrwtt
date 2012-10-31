@@ -1,0 +1,9 @@
+h1= Group.model_name.human
+
+= action_on @kindergarten
+
+= simple_form_for [@kindergarten, @group] do |f|
+  = f.input :name
+
+  = f.submit
+
