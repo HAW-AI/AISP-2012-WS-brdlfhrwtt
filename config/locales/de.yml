@@ -1,6 +1,17 @@
 
 de:
   Delens: 'SuperKiGaV'
+
+  children:
+    one: "ein Kind"
+    other: "%{count} Kinder"
+  groups:
+    one: "eine Gruppe"
+    other: "%{count} Gruppen"
+  kindergartens:
+    one: "ein Kindergarten"
+    other: "%{count} Kindergärten"
+
   fees:
     index:
       title: 'Beitragstabelle'

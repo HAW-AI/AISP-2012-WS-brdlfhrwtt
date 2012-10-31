@@ -1,6 +1,7 @@
 h1 #{@group.name} - #{link_to @kindergarten.name, @kindergarten}
 
 h2= ChildrenGroup.model_name.human
+p.detail= t("children", count: @group.children.count)
 ul.overview
   - @group.children.each do |child|
     li= link_to child.name, child

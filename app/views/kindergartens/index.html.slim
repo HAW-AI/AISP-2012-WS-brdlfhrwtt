@@ -3,6 +3,7 @@ h1= Kindergarten.model_name.human
 - content_for :sidebar do
   = action_on :kindergarten, :new
 
+p.detail= t("kindergartens", count: @kindergartens.count)
 ul.overview
   - @kindergartens.each do |kindergarten|
     li= link_to kindergarten.name, kindergarten
