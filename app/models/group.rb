@@ -1,5 +1,5 @@
 class Group < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :limit, :starts_on, :ends_on
 
   has_many :children_groups
   has_many :children, :through => :children_groups

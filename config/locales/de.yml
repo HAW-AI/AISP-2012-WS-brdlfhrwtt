@@ -17,6 +17,11 @@ de:
         valid_at: 'Gültig seit'
         care_time: 'Betreungszeit'
         max_age: 'Höchstalter'
+
+  errors:
+    messages:
+      not_a_date: 'ungültig'
+
   helper:
     in_hours:
       one: 'eine Stunde'
@@ -29,5 +34,10 @@ de:
       kindergarten:
         index: Kindergartenliste
         new: Kindergarten Anlegen
+        show: Kindergarten
+      group:
+        index: Gruppenliste
+        new: Gruppe Anlegen
+        show: Gruppe Anzeigen
 
 
