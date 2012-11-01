@@ -3,6 +3,7 @@ class Account < ActiveRecord::Base
 
   belongs_to :child
 
+  validates :child, presence: true
   validates :net_income, numericality: { greater_than_or_equal_to: 0 }
   validates :person_count, numericality: { greater_than_or_equal_to: 2 }
   validates :child_count, numericality: { greater_than_or_equal_to: 1 }

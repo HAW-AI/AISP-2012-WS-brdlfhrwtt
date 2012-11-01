@@ -9,6 +9,8 @@ describe Account do
   it { should have_attribute :free_preschool_year }
   it { should belong_to :child }
 
+  it { should validate_presence_of(:child) }
+
   it { should allow_value(0).for(:net_income) }
   it { should allow_value(1000).for(:net_income) }
   it { should_not allow_value(-1).for(:net_income) }
