@@ -6,6 +6,7 @@ Delens::Application.routes.draw do
   resources :accounts
   resources :children, only: [:new, :create, :show]
 
+
   resources :kindergartens, shallow: true do
     resources :groups, shallow: true do
       resources :children
@@ -15,4 +16,7 @@ Delens::Application.routes.draw do
     end
   end
 
+  namespace :extern do
+    resource :children
+  end
 end
