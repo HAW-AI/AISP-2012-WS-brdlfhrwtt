@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031232508) do
+ActiveRecord::Schema.define(:version => 20121101005606) do
 
   create_table "accounts", :force => true do |t|
     t.boolean  "day_care_coupon"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20121031232508) do
     t.boolean  "disability", :default => false
     t.date     "born_at"
     t.integer  "parent_id"
+    t.string   "token"
   end
 
   create_table "children_groups", :id => false, :force => true do |t|

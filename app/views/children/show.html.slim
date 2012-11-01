@@ -21,3 +21,6 @@ dl
 
   dt= Child.human_attribute_name :waitlists
   dd= raw @child.waitlists.map{|w| link_to(w.group.name, w.group) }.to_sentence
+
+  dt= t '.extern_link'
+  dd= link_to extern_children_url(token: @child.token), extern_children_url(token: @child.token)

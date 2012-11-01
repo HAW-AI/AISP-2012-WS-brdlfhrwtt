@@ -1,5 +1,5 @@
 class Child < ActiveRecord::Base
-  attr_accessible :nick, :firstname, :lastname, :born_at, :disability, :gender
+  attr_accessible :nick, :firstname, :lastname, :born_at, :disability, :gender, :token
 
   has_many :children_groups
   has_many :groups, :through => :children_groups
@@ -20,5 +20,15 @@ class Child < ActiveRecord::Base
 
   def full_name
     [lastname, firstname].join(', ')
+  end
+
+  def token
+    read_attribute(:token) or begin
+      update_attributes!(token: SecureRandom.hex(13))
+    rescue
+      retry
+    ensure
+      read_attribute(:token)
+    end
   end
 end

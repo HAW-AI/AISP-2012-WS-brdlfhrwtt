@@ -1,0 +1,10 @@
+h1= @child.name
+
+h2= Waitlist.model_name.human
+ul.overview
+  - unless @child.waitlists.empty?
+    - @child.waitlists.each do |w|
+      li ##{w.position} #{w.group.name} - #{w.kindergarten.name}
+  - else
+    li
+      em= t('empty')
