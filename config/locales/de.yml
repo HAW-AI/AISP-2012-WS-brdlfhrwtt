@@ -44,6 +44,7 @@ de:
         born_at: 'Geburtstag'
         disability: 'Behinderung'
         gender: 'Geschlecht'
+        waiting_groups: 'Wunschgruppen'
       account:
         day_care_coupon: 'Kitagutschein'
         child: 'Kind'
