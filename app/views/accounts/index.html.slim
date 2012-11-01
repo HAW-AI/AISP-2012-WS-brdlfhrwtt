@@ -2,3 +2,8 @@ h1= Account.model_name.human
 
 - content_for :sidebar do
   = action_on :account, :new
+
+p.detail= t("accounts", count: @accounts.count)
+ul.overview
+  - @accounts.each do |account|
+    li= link_to account.child.name, account
