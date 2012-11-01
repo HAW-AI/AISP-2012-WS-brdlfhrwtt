@@ -1,5 +1,5 @@
 class Child < ActiveRecord::Base
-  attr_accessible :nick, :firstname, :lastname, :born_at, :disability, :gender, :token
+  attr_accessible :nick, :firstname, :lastname, :born_at, :disability, :gender, :token, :waiting_group_ids
 
   has_many :children_groups
   has_many :groups, :through => :children_groups
