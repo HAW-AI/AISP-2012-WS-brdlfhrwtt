@@ -1,6 +1,7 @@
 h1 #{Group.model_name.human} - #{link_to @kindergarten.name, @kindergarten}
 
 - content_for :sidebar do
+  = action_on :dashboard, :show
   = action_on @group
   = action_on @group, :waitlist
 
