@@ -1,5 +1,9 @@
 h1 #{Group.model_name.human} - #{link_to @kindergarten.name, @kindergarten}
 
+- content_for :sidebar do
+  = action_on @group
+  = action_on @group, :waitlist
+
 = simple_nested_form_for @group do |f|
   = f.input :name
   = f.input :limit
