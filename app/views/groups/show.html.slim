@@ -1,5 +1,8 @@
 h1 #{@group.name} - #{link_to @kindergarten.name, @kindergarten}
 
+- content_for :sidebar do
+  = action_on @group, :waitlist
+
 h2= ChildrenGroup.model_name.human
 p.detail= t("children", count: @group.children.count)
 ul.overview
@@ -8,11 +11,6 @@ ul.overview
 
 h2= Waitlist.model_name.human
 p.detail= t("children", count: @group.waiting_children.count)
-= simple_form_for @group do |form|
-  ol.overview
-      = form.simple_fields_for :waitlists do |waitlist_form|
-        = link_to waitlist_form.object.child.name, waitlist_form.object.child
-        span Verschieben auf Platz #{waitlist_form.input :position, label: false} (bisheriger Platzhalter fällt nach hinten)
-        br
-
-  = form.submit
+ol.overview
+  - @group.waiting_children.each do |child|
+    li= link_to child.name, child

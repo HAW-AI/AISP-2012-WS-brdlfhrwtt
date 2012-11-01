@@ -15,8 +15,8 @@ de:
   fees:
     index:
       title: 'Beitragstabelle'
-      care_time: 'Betreungszeit: '
-      max_age:
+      care_time: 'Betreungszeit'
+      max_age: 'Maximal Alter'
 
   dashboards:
     show:
@@ -65,17 +65,16 @@ de:
     actions:
       edit: 'Bearbeiten'
       kindergarten:
-        index: Kindergartenliste
-        new: Kindergarten Anlegen
-        show: Kindergarten
+        index: 'Kindergartenliste'
+        new: 'Kindergarten Anlegen'
+        show: 'Kindergarten'
       group:
-        index: Gruppenliste
-        new: Gruppe Anlegen
-        show: Gruppe Anzeigen
+        index: 'Gruppenliste'
+        new: 'Gruppe Anlegen'
+        show: 'Gruppe Anzeigen'
+        waitlist: 'Warteliste bearbeiten'
       child:
-        new: Kind Anlegen
+        new: 'Kind Anlegen'
       account:
-        index: Abrechnungen
-        new: Abrechnung Anlegen
-
-
+        index: 'Abrechnungen'
+        new: 'Abrechnung Anlegen'

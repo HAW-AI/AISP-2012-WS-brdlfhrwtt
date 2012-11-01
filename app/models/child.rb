@@ -3,7 +3,7 @@ class Child < ActiveRecord::Base
 
   has_many :children_groups
   has_many :groups, :through => :children_groups
-  has_many :waitlists
+  has_many :waitlists, include: :group
   belongs_to :parent
 
   validates :nick, presence: true
