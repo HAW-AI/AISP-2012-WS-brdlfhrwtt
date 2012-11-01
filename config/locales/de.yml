@@ -83,3 +83,5 @@ de:
       account:
         index: 'Abrechnungen'
         new: 'Abrechnung Anlegen'
+      dashboard:
+        show: 'Übersicht'

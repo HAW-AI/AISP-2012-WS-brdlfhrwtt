@@ -1,5 +1,10 @@
 h1= @child.nick
 
+- content_for :sidebar do
+  = action_on :dashboard, :show
+  = action_on :kindergartens, :index
+  = action_on :child, :new
+
 dl
   dt= Child.human_attribute_name :firstname
   dd= @child.firstname
