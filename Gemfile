@@ -8,7 +8,6 @@ gem 'sqlite3', group: [:development, :test]
 
 # JavaScript
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
 gem 'select2-rails'
 
 gem 'slim-rails' # template engine
