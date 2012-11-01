@@ -50,6 +50,7 @@ de:
         child_count: 'Kinder im Haushalt'
         birth_sequence_position: 'Rang in Geburtenfolge'
         free_preschool_year: 'Kostenloses Vorschuljahr'
+        created_at: 'Abrechnungsdatum'
 
   errors:
     messages:

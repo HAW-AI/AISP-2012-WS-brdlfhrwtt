@@ -2,3 +2,29 @@ h1= Account.model_name.human
 
 - content_for :sidebar do
   = action_on :accounts, :index
+
+h2= @account.child.name
+dl
+  dt= Account.human_attribute_name(:day_care_coupon)
+  dd= @account.day_care_coupon
+
+  dt= Account.human_attribute_name(:child_id)
+  dd= @account.child_id
+
+  dt= Account.human_attribute_name(:net_income)
+  dd= @account.net_income
+
+  dt= Account.human_attribute_name(:person_count)
+  dd= @account.person_count
+
+  dt= Account.human_attribute_name(:child_count)
+  dd= @account.child_count
+
+  dt= Account.human_attribute_name(:birth_sequence_position)
+  dd= @account.birth_sequence_position
+
+  dt= Account.human_attribute_name(:free_preschool_year)
+  dd= @account.free_preschool_year
+
+  dt= Account.human_attribute_name(:created_at)
+  dd= @account.created_at
