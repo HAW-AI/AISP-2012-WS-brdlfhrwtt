@@ -27,7 +27,7 @@ dl
   dd= @account.free_preschool_year
 
   dt= Account.human_attribute_name(:created_at)
-  dd= @account.created_at
+  dd= l @account.created_at
 
   dt Beitrag in EUR
-  dd= @money_to_pay
+  dd #{number_to_currency(@price)}/Monat
