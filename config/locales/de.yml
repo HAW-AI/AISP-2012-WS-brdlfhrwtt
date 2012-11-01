@@ -1,6 +1,7 @@
 
 de:
   Delens: 'SuperKiGaV'
+  empty: 'Kein Eintrag gefunden'
 
   children:
     one: "ein Kind"
