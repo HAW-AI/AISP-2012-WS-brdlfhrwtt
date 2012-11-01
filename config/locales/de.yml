@@ -3,6 +3,13 @@ de:
   Delens: 'SuperKiGaV'
   empty: 'Kein Eintrag gefunden'
 
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'Pflichtfeld'
+      mark: '*'
+
   children:
     one: "ein Kind"
     other: "%{count} Kinder"
