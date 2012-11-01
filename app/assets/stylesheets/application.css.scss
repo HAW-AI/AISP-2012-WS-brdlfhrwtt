@@ -15,3 +15,10 @@ $max-width: 50em;
 .select2-search-field input,.select2-input {
   height: 1.8em !important;
 }
+.select2-search-field {
+
+  width: 100% !important;
+}
+.select2-container {
+  min-width: 300px;
+}
