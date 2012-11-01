@@ -14,7 +14,7 @@ body {
   margin-top: 120px;
 
   & > header {
-    @include position(fixed, 0px 0 0 0px);
+    @include position(absolute, 0px 0 0 0px);
     // Gradiant picket at http://www.colorzilla.com/gradient-editor/
     @include linear-gradient(rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
     width: 100%;
