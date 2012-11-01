@@ -42,6 +42,7 @@ de:
         nick: 'Spitzname (Rufname)'
         born_at: 'Geburtstag'
         disability: 'Behinderung'
+        gender: 'Geschlecht'
       account:
         day_care_coupon: 'Kitagutschein'
         child: 'Kind'
