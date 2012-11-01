@@ -75,6 +75,7 @@ de:
         index: 'Gruppenliste'
         new: 'Gruppe Anlegen'
         show: 'Gruppe Anzeigen'
+        edit: 'Gruppe Bearbeiten'
         waitlist: 'Warteliste bearbeiten'
       child:
         new: 'Kind Anlegen'

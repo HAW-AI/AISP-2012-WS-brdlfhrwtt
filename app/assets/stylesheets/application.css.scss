@@ -1,3 +1,6 @@
+/*
+*= require select2
+*/
 @import "bourbon";
 $max-width: 50em;
 @import "neat";
@@ -8,3 +11,7 @@ $max-width: 50em;
 @import "list";
 @import "form";
 @import "action";
+
+.select2-search-field input,.select2-input {
+  height: 1.8em !important;
+}
