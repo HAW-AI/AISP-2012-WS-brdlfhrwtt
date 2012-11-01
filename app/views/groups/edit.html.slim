@@ -1,0 +1,13 @@
+h1 #{Group.model_name.human} - #{link_to @kindergarten.name, @kindergarten}
+
+= simple_nested_form_for @group do |f|
+  = f.input :name
+  = f.input :limit
+  = f.input :starts_on
+  = f.input :ends_on
+
+  = f.association :children
+  = f.association :waiting_children
+
+  = f.submit
+
