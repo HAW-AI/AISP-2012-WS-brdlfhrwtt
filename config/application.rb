@@ -19,6 +19,9 @@ module Delens
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
+    # extend autoload paths
+    config.autoload_paths += %W(#{config.root}/lib)
+
     # Enforce whitelist mode for mass assignment.
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
