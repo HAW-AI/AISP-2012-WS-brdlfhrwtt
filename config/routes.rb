@@ -1,6 +1,6 @@
 Delens::Application.routes.draw do
-  constraints(AppDomainConstraint) do
     root to: 'dashboards#show'
+  constraints(AppDomainConstraint) do
     resource :dashboard
     resources :fees
     resources :accounts
@@ -21,4 +21,8 @@ Delens::Application.routes.draw do
     end
   end
 
+  scope module: 'admin', constraints: { subdomain: 'admin' } do
+    root to: 'dashboards#show'
+    resource :dashboard
+  end
 end
