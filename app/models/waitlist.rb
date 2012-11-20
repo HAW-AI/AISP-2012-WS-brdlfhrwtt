@@ -6,4 +6,6 @@ class Waitlist < ActiveRecord::Base
   belongs_to :child
   belongs_to :group
   has_one :kindergarten, through: :group
+
+  validates :position, numericality: { greater_than: 0 }
 end

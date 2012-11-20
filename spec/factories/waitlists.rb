@@ -4,6 +4,6 @@ FactoryGirl.define do
   factory :waitlist do
     group
     child
-    position { rand(20) }
+    position { rand(20) + 1 }
   end
 end
