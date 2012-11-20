@@ -2,6 +2,7 @@
 de:
   Delens: 'SuperKiGaV'
   empty: 'Kein Eintrag gefunden'
+  logged_in_as: 'Angemeldet als %{name}.'
 
   simple_form:
     "yes": 'Yes'
@@ -87,6 +88,7 @@ de:
         waitlist: 'Warteliste bearbeiten'
       child:
         new: 'Kind Anlegen'
+        index: 'Meine Kinder'
       account:
         index: 'Abrechnungen'
         new: 'Abrechnung Anlegen'

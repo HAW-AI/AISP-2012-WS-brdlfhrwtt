@@ -1,0 +1,10 @@
+h1 Meine Kinder
+
+- content_for :sidebar do
+  = t(:logged_in_as, name: current_user.name)
+  = link_to "Abmelden", root_path, class: :action
+
+ul.overview
+  - @children.each do |child|
+    li
+      = link_to child.firstname, child

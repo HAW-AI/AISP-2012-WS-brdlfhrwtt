@@ -1,0 +1,22 @@
+h1= @child.name
+
+- content_for :sidebar do
+  = action_on :children, :index
+
+h2 Gruppen
+ul.overview
+  - unless @child.groups.empty?
+    - @child.groups.each do |g|
+      li #{g.name} - #{g.kindergarten.name}
+  - else
+    li
+      em= t('empty')
+
+h2= Waitlist.model_name.human
+ul.overview
+  - unless @child.waitlists.empty?
+    - @child.waitlists.each do |w|
+      li ##{w.position} #{w.group.name} - #{w.kindergarten.name}
+  - else
+    li
+      em= t('empty')

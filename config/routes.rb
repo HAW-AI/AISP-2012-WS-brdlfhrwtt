@@ -32,7 +32,7 @@ Delens::Application.routes.draw do
   end
 
   scope module: 'parent', constraints: { subdomain: 'parent' } do
-    root to: 'dashboards#show'
-    resource :dashboard
+    root to: 'children#index'
+    resources :children
   end
 end
