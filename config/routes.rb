@@ -2,10 +2,19 @@ Delens::Application.routes.draw do
   constraints(AppDomainConstraint) do
     root to: 'dashboards#show'
     resource :dashboard
+
+    resource :session, except: [:new]
+    match 'login' => 'sessions#new', :as => :login
+    match 'logout' => 'sessions#destroy', :as => :logout
+
+    resource :oauth do
+      get :callback
+    end
+    match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
     resources :fees
     resources :accounts
     resources :children
-
 
     resources :kindergartens, shallow: true do
       resources :groups, shallow: true do

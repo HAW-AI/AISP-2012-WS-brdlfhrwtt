@@ -6,6 +6,9 @@ gem 'rails-i18n'
 gem 'pg', group: :production
 gem 'sqlite3', group: [:development, :test]
 
+# authentication
+gem 'sorcery'
+
 # JavaScript
 gem 'jquery-rails'
 gem 'select2-rails'
