@@ -25,4 +25,18 @@ module ApplicationHelper
   def delete(resources)
     action_on(resources, :delete)
   end
+
+  def login_provider(provider) 
+    link_to provider.to_s.humanize, auth_at_provider_path(provider), class: ['login',provider]
+  end
+  def login_twitter
+    login_provider(:twitter)
+  end
+  def login_facebook
+    login_provider(:facebook)
+  end
+
+  def login_logout
+    link_to 'login', login_path, class: 'action'
+  end
 end

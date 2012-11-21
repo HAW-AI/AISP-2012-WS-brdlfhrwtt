@@ -9,7 +9,13 @@ body
   header
     #logo
     h1= link_to t('Delens'), root_path
+    #navigation= login_logout
 
   #content
+    - if notice
+      p.notice= notice
+    -if alert
+      p.alert= alert
+
     article= yield
     aside= yield :sidebar
