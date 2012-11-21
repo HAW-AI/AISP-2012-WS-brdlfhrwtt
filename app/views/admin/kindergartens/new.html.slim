@@ -1,0 +1,10 @@
+h1= Kindergarten.model_name.human
+
+- content_for :sidebar do
+  = action_on :dashboard, :show
+  = action_on :kindergartens, :index
+
+= simple_form_for @kindergarten do |f|
+  = f.input :name
+
+  = f.submit
