@@ -1,1 +1,13 @@
-h1= t('.title')
+h1= @kindergarten.name
+
+- content_for :sidebar do
+  = action_on :children, :index
+  = action_on :child, :new
+  = action_on :groups, :index
+  = action_on :group, :new
+  = action_on :accounts, :index
+
+h2= t('.stats')
+ul
+  li= t('groups', count: Group.count)
+  li= t('children', count: Child.count)

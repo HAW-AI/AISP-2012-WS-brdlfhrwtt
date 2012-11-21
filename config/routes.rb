@@ -31,6 +31,7 @@ Delens::Application.routes.draw do
   scope module: 'manager', constraints: { subdomain: 'manager' } do
     root to: 'dashboards#show'
     resource :dashboard
+    resources :groups
   end
 
   scope module: 'parent', constraints: { subdomain: 'parent' } do

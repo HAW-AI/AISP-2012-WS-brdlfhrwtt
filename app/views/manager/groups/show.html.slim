@@ -1,0 +1,18 @@
+h1 #{@group.name} - #{link_to @kindergarten.name, @kindergarten}
+
+- content_for :sidebar do
+  = action_on :dashboard, :show
+  = action_on @group, :edit
+  = action_on @group, :waitlist
+
+h2= ChildrenGroup.model_name.human
+p.detail= t("children", count: @group.children.count)
+ul.overview
+  - @group.children.each do |child|
+    li= link_to child.name, child
+
+h2= Waitlist.model_name.human
+p.detail= t("children", count: @group.waiting_children.count)
+ol.overview
+  - @group.waiting_children.each do |child|
+    li= link_to child.name, child

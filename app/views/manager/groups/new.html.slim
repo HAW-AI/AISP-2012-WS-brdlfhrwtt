@@ -1,0 +1,13 @@
+h1 #{Group.model_name.human} - #{link_to @kindergarten.name, @kindergarten}
+
+- content_for :sidebar do
+  = action_on :dashboard, :show
+
+= simple_form_for [@kindergarten, @group] do |f|
+  = f.input :name
+  = f.input :limit
+  = f.input :starts_on
+  = f.input :ends_on
+
+  = f.submit
+
