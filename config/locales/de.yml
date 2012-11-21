@@ -30,7 +30,7 @@ de:
   dashboards:
     show:
       title: 'Übersicht'
-      stats: 'Statistik'
+      intro: 'Bacon ipsum dolor sit amet pork chop turkey jowl drumstick corned beef turducken t-bone salami andouille strip steak filet mignon bresaola kielbasa meatball beef ribs. Turkey boudin swine, tail pork loin meatball brisket ham hock flank frankfurter turducken jerky ribeye. Spare ribs filet mignon tenderloin bresaola shoulder pig drumstick flank salami meatloaf turkey ribeye prosciutto. Pork meatloaf cow short ribs, ground round pig prosciutto leberkas corned beef drumstick swine. Shank beef ham ground round pig ham hock ball tip turducken shankle venison rump. Tenderloin hamburger jerky brisket bacon cow chicken filet mignon tri-tip, ham hock chuck short loin corned beef. Fatback pork loin flank, shoulder ham hock salami beef ribs spare ribs pig boudin.'
 
   activerecord:
     models:
