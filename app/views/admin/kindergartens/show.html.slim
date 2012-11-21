@@ -4,4 +4,8 @@ h1= @kindergarten.name
   = action_on :dashboard, :show
   = action_on :kindergartens, :index
 
-h2 Manager (todo)
+h2= Manager.model_name.human
+- if @kindergarten.manager.nil?
+  p Kein Leiter zugewiesen.
+- else
+  = link_to @kindergarten.manager.name, @kindergarten.manager

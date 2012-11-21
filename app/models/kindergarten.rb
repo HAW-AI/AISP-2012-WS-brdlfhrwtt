@@ -1,6 +1,7 @@
 class Kindergarten < ActiveRecord::Base
-  has_many :groups
   attr_accessible :name
+  has_many :groups
+  has_one :manager
 
   validates :name, presence: true
 end

@@ -3,8 +3,9 @@ h1= t('.title')
 - content_for :sidebar do
   = action_on :kindergartens, :index
   = action_on :kindergarten, :new
-  = link_to 'Managers', controller: 'admin/managers', action: :index
+  = action_on :managers, :index
 
 h2= t('.stats')
 ul
   li= t('kindergartens', count: Kindergarten.count)
+  li= t('managers', count: Manager.count)

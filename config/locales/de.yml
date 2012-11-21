@@ -20,6 +20,9 @@ de:
   kindergartens:
     one: "ein Kindergarten"
     other: "%{count} Kindergärten"
+  managers:
+    one: "ein Leiter"
+    other: "%{count} Leiter"
 
   fees:
     index:
@@ -40,6 +43,7 @@ de:
       group: 'Gruppe'
       children_group: 'Kinder der Gruppe'
       waitlist: 'Warteliste'
+      manager: 'Leiter'
     attributes:
       fee:
         valid_at: 'Gültig seit'
@@ -94,3 +98,7 @@ de:
         new: 'Abrechnung Anlegen'
       dashboard:
         show: 'Übersicht'
+      manager:
+        index: 'Leiterliste'
+        new: 'Leiter Anlegen'
+        edit: 'Leiter bearbeiten'

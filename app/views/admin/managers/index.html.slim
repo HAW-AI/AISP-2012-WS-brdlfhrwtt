@@ -1,0 +1,13 @@
+h1= Manager.model_name.human
+
+- content_for :sidebar do
+  = action_on :dashboard, :show
+  = action_on :manager, :new
+
+p.detail= t("managers", count: @managers.count)
+ul.overview
+  - @managers.each do |manager|
+    - if manager.kindergarten.nil?
+      li= link_to manager.name, manager
+    - else
+      li= link_to "#{manager.name} (#{manager.kindergarten.name})", manager

@@ -1,0 +1,11 @@
+h1= Manager.model_name.human
+
+- content_for :sidebar do
+  = action_on :dashboard, :show
+  = action_on :managers, :index
+
+= simple_form_for @manager do |f|
+  = f.input :name
+  = f.association :kindergarten, collection: Kindergarten.all
+
+  = f.submit

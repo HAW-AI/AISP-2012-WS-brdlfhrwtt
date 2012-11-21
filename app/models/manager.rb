@@ -1,5 +1,5 @@
 class Manager < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :kindergarten_id
 
   belongs_to :kindergarten
 

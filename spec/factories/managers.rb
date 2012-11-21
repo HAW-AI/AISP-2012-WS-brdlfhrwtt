@@ -2,7 +2,6 @@
 
 FactoryGirl.define do
   factory :manager do
-    name "MyString"
-    kindergarten_id ""
+    name { Faker::NameDE.name }
   end
 end
