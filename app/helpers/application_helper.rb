@@ -38,9 +38,9 @@ module ApplicationHelper
 
   def login_logout
     if current_user
-      link_to "logout (#{current_user.username})", logout_path, class: 'action'
+      link_to "logout (#{current_user.username})", logout_url, class: 'action'
     else
-      link_to 'login', login_path, class: 'action'
+      link_to 'login', login_url, class: 'action'
     end
   end
 end
