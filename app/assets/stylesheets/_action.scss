@@ -1,4 +1,5 @@
 a.action {
+  display: inline-block;
   @include button(pill);
   &,&:hover,&:visited,&:active {
     text-decoration: none;
