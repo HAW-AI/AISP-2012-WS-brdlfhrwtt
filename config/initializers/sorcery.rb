@@ -70,7 +70,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :google, :liveid] .
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = [:twitter, :facebook]
 
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -82,16 +82,16 @@ Rails.application.config.sorcery.configure do |config|
 
   # Twitter wil not accept any requests nor redirect uri containing localhost,
   # make sure you use 0.0.0.0:3000 to access your app in development
-  #
-  # config.twitter.key = ""
-  # config.twitter.secret = ""
-  # config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
-  # config.twitter.user_info_mapping = {:email => "screen_name"}
-  #
-  # config.facebook.key = ""
-  # config.facebook.secret = ""
-  # config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
-  # config.facebook.user_info_mapping = {:email => "name"}
+
+  config.twitter.key = ENV['TWITTER_CONSUMER_KEY']
+  config.twitter.secret = ENV['TWITTER_CONSUMER_SECRET']
+  config.twitter.callback_url = "http://delens.dev/oauth/callback?provider=twitter"
+  config.twitter.user_info_mapping = {username: "screen_name", email: "screen_name"}
+
+  config.facebook.key = ENV['FACEBOOK_CONSUMER_KEY']
+  config.facebook.secret = ENV['FACEBOOK_CONSUMER_SECRET']
+  config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
+  config.facebook.user_info_mapping = {username: "name", email: "name"}
   #
   # config.github.key = ""
   # config.github.secret = ""
@@ -371,7 +371,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
 
     # User's identifier in authentications class.
