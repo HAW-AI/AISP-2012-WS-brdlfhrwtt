@@ -1,4 +1,4 @@
-class Manager < ActiveRecord::Base
+class Manager < User
   attr_accessible :name, :kindergarten_id
 
   belongs_to :kindergarten

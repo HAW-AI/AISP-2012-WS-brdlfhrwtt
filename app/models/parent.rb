@@ -1,4 +1,4 @@
-class Parent < ActiveRecord::Base
+class Parent < User
   has_many :children
 
   validates :name, presence: true
