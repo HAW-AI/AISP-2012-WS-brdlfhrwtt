@@ -4,8 +4,8 @@ Delens::Application.routes.draw do
     resource :dashboard
 
     resource :session, except: [:new]
-    match 'login' => 'sessions#new', :as => :login
-    match 'logout' => 'sessions#destroy', :as => :logout
+    match 'login' => 'sessions#new', :as => :login, subdomain: 'www'
+    match 'logout' => 'sessions#destroy', :as => :logout, subdomain: 'www'
 
     resource :oauth do
       get :callback
