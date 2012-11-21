@@ -44,6 +44,7 @@ de:
       children_group: 'Kinder der Gruppe'
       waitlist: 'Warteliste'
       manager: 'Leiter'
+      parent: 'Elternteil'
     attributes:
       fee:
         valid_at: 'Gültig seit'
@@ -102,3 +103,6 @@ de:
         index: 'Leiterliste'
         new: 'Leiter Anlegen'
         edit: 'Leiter bearbeiten'
+      parent:
+        index: 'Elternliste'
+        new: 'Elterneintrag Anlegen'

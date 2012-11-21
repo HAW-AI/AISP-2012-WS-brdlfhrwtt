@@ -1,6 +1,8 @@
 h1= @kindergarten.name
 
 - content_for :sidebar do
+  = action_on :parents, :index
+  = action_on :parent, :new
   = action_on :children, :index
   = action_on :child, :new
   = action_on :groups, :index
