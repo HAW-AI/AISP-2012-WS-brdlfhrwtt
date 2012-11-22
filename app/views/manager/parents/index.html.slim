@@ -6,4 +6,7 @@ h1= Parent.model_name.human
 
 h2= t('stats')
 
-p= t('parents', count: @parents.count)
+p.detail=  t('parents', count: @parents.count)
+ul.overview
+  - @parents.each do |parent|
+    li= parent
