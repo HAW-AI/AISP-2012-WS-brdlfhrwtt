@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     respond_to do |format|
       if @user = login(params[:email],params[:password])
-        format.html { redirect_back_or_to(root_url(subdomain:'parent'), notice: 'Login successfull.') }
+        format.html { redirect_back_or_to(page_after_login, notice: 'Login successfull.') }
         format.xml { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { flash.now[:alert] = 'Login failed.'; render :action => "new" }
