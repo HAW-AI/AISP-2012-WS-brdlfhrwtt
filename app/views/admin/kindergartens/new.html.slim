@@ -6,5 +6,6 @@ h1= Kindergarten.model_name.human
 
 = simple_form_for @kindergarten do |f|
   = f.input :name
+  = f.association :state, collection: State.all
 
   = f.submit
