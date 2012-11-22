@@ -1,4 +1,4 @@
-class AccountsController < ResourceController
+class Manager::AccountsController < Manager::ResourceController
   def show
     @account = Account.find(params[:id])
 

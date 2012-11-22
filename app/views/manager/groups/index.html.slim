@@ -2,8 +2,6 @@ h1= @kindergarten.try(:name)
 
 - content_for :sidebar do
   = action_on :dashboard, :show
-  = action_on :kindergartens, :index
-  = action_on [@kindergarten, :group], :new
 
 h2= Group.model_name.human
 

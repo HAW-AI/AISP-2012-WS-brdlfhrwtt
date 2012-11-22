@@ -2,7 +2,6 @@ h1 #{Waitlist.model_name.human} #{Group.model_name.human} - #{link_to @kindergar
 
 - content_for :sidebar do
   = action_on :dashboard, :show
-  = action_on :kindergartens, :index
 
 = simple_form_for @group do |f|
   = f.simple_fields_for :waitlists do |w|
