@@ -1,6 +1,7 @@
 h1= Account.model_name.human
 
 - content_for :sidebar do
+  = action_on :dashboard, :show
   = action_on :accounts, :index
 
 h2= @account.child.name
