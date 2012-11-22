@@ -9,4 +9,7 @@ h2= t('stats')
 p.detail=  t('parents', count: @parents.count)
 ul.overview
   - @parents.each do |parent|
-    li= parent.name
+    - if parent.name.nil?
+      li= "#{parent.username} (Twitter)"
+    - else
+      li= parent.name
