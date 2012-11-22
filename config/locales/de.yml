@@ -23,6 +23,11 @@ de:
   managers:
     one: "ein Leiter"
     other: "%{count} Leiter"
+  parents:
+    one: "ein Elternpaar"
+    other: "%{count} Eltern"
+
+  stats: "Statistik"
 
   fees:
     index:

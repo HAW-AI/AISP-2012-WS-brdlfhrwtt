@@ -1,1 +1,9 @@
-h1= t('.title')
+h1= Parent.model_name.human
+
+- content_for :sidebar do
+  = action_on :dashboard, :show
+  = action_on :groups, :index
+
+h2= t('stats')
+
+p= t('parents', count: @parents.count)
