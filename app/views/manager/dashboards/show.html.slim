@@ -11,5 +11,5 @@ h1= @kindergarten.try(:name)
 
 h2= t('.stats')
 ul
-  li= t('groups', count: (@groups.count rescue 0))
-  li= t('children', count: (Child.scoped.merge(Kindergarten.first.groups).count rescue 0))
+  li= t('groups', count: (current_user.groups.count rescue 0))
+  li= t('children', count: (current_user.children.count rescue 0))

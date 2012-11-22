@@ -2,7 +2,6 @@ h1= Child.model_name.human
 
 - content_for :sidebar do
   = action_on :dashboard, :show
-  = action_on :kindergartens, :index
 
 = simple_form_for @child do |f|
   = f.input :firstname
@@ -11,7 +10,5 @@ h1= Child.model_name.human
   = f.input :gender
   = f.input :born_at, :start_year => Date.today.year - 40
   = f.input :disability
-
-  = f.association :waiting_groups, label_method: ->(x){"#{x.name} - #{x.kindergarten.name}"}
 
   = f.submit
