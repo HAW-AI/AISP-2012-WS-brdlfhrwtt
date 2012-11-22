@@ -1,4 +1,4 @@
-class Manager::ParentsController < ResourceController
+class Manager::ParentsController < Manager::ResourceController
   belongs_to :kindergarten, shallow: true
   custom_actions :resource => :waitlist
 
