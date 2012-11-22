@@ -1,4 +1,10 @@
-h1 What comes here?
+h1= Parent.model_name.human
 
 - content_for :sidebar do
   = action_on :dashboard, :show
+  = action_on :parents, :index
+
+= simple_form_for @parent do |f|
+  = f.input :name
+
+  = f.submit

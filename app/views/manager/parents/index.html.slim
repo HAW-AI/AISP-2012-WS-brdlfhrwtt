@@ -9,4 +9,4 @@ h2= t('stats')
 p.detail=  t('parents', count: @parents.count)
 ul.overview
   - @parents.each do |parent|
-    li= parent
+    li= parent.name
