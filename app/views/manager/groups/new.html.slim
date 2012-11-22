@@ -1,4 +1,4 @@
-h1 #{Group.model_name.human} - #{link_to @kindergarten.name, @kindergarten}
+h1 #{Group.model_name.human}
 
 - content_for :sidebar do
   = action_on :dashboard, :show
@@ -10,4 +10,3 @@ h1 #{Group.model_name.human} - #{link_to @kindergarten.name, @kindergarten}
   = f.input :ends_on
 
   = f.submit
-
