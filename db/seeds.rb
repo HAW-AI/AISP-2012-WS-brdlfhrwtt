@@ -51,6 +51,7 @@ def import_fees(filename)
   max_age, care_time = row
 
   fee = Fee.new
+  fee.state = State.find_by_name("Hamburg")
   fee.max_age = max_age
   fee.care_time = care_time
 
@@ -74,7 +75,6 @@ def import_rates(filename)
     net_income, two_people, three_people, four_people, five_people, six_people = row
 
     rate = Rate.new
-    rate.state = State.find_by_name("Hamburg")
     rate.net_income = net_income
     rate.two_people = two_people
     rate.three_people = three_people
@@ -87,7 +87,6 @@ def import_rates(filename)
 
     if fee2 then
       rate = Rate.new
-      rate.state = State.find_by_name("Hamburg")
       rate.net_income = net_income
       rate.two_people = two_people
       rate.three_people = three_people

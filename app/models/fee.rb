@@ -1,5 +1,6 @@
 class Fee < ActiveRecord::Base
   has_many :rates
+  belongs_to :state
 
   accepts_nested_attributes_for :rates
 
