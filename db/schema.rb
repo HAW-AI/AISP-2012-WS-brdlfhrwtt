@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121122022947) do
+ActiveRecord::Schema.define(:version => 20121122032901) do
 
   create_table "accounts", :force => true do |t|
     t.boolean  "day_care_coupon"
@@ -129,9 +129,9 @@ ActiveRecord::Schema.define(:version => 20121122022947) do
   create_table "waitlists", :force => true do |t|
     t.integer  "group_id"
     t.integer  "child_id"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "position",   :default => 1
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
 end
