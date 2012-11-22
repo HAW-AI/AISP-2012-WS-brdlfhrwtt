@@ -1,4 +1,4 @@
-h1= @kindergarten.name
+h1= @kindergarten.try(:name)
 
 - content_for :sidebar do
   = action_on :dashboard, :show
@@ -7,7 +7,7 @@ h1= @kindergarten.name
 
 h2= Group.model_name.human
 
-p.detail= t("groups", count: @kindergarten.groups.count)
+p.detail= t("groups", count: @groups.count)
 ul.overview
-  - @kindergarten.groups.each do |group|
+  - @groups.each do |group|
     li= link_to group.name, group
