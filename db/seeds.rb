@@ -11,6 +11,36 @@
 require 'csv'
 
 
+# federal states
+state_names =
+  [ "Baden-Württemberg",
+    "Bayern",
+    "Berlin",
+    "Brandenburg",
+    "Bremen",
+    "Hamburg",
+    "Hessen",
+    "Mecklenburg-Vorpommer",
+    "Niedersachsen",
+    "Nordrhein-Westfalen",
+    "Rheinland-Pfalz",
+    "Saarland",
+    "Sachsen",
+    "Sachsen-Anhalt",
+    "Schleswig-Holstein",
+    "Thüringen" ]
+
+
+state_names.each do |state_name|
+  state = State.new
+  state.name = state_name
+  state.save!
+end
+
+
+
+# rates and fees
+
 def filename_to_path(filename)
   File.dirname(__FILE__) + '/seeds/' + filename + '.csv'
 end
@@ -44,6 +74,7 @@ def import_rates(filename)
     net_income, two_people, three_people, four_people, five_people, six_people = row
 
     rate = Rate.new
+    rate.state = State.find_by_name("Hamburg")
     rate.net_income = net_income
     rate.two_people = two_people
     rate.three_people = three_people
@@ -56,6 +87,7 @@ def import_rates(filename)
 
     if fee2 then
       rate = Rate.new
+      rate.state = State.find_by_name("Hamburg")
       rate.net_income = net_income
       rate.two_people = two_people
       rate.three_people = three_people
@@ -72,32 +104,4 @@ end
 ('a'..'h').each do |letter|
   filename = 'tabelle_' + letter
   import_rates(filename)
-end
-
-
-
-# federal states
-state_names =
-  [ "Baden-Württemberg",
-    "Bayern",
-    "Berlin",
-    "Brandenburg",
-    "Bremen",
-    "Hamburg",
-    "Hessen",
-    "Mecklenburg-Vorpommer",
-    "Niedersachsen",
-    "Nordrhein-Westfalen",
-    "Rheinland-Pfalz",
-    "Saarland",
-    "Sachsen",
-    "Sachsen-Anhalt",
-    "Schleswig-Holstein",
-    "Thüringen" ]
-
-
-state_names.each do |state_name|
-  state = State.new
-  state.name = state_name
-  state.save!
 end
