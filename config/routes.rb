@@ -46,8 +46,10 @@ Delens::Application.routes.draw do
       end
     end
     resources :parents
-    resources :children
-    resources :accounts
+    resources :children do
+      resources :accounts
+    end
+    resources :accounts, except: [:new, :create]
   end
 
   scope module: 'parent', constraints: { subdomain: 'parent' } do
