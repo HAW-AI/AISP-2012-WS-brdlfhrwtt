@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -70,4 +72,32 @@ end
 ('a'..'h').each do |letter|
   filename = 'tabelle_' + letter
   import_rates(filename)
+end
+
+
+
+# federal states
+state_names =
+  [ "Baden-Württemberg",
+    "Bayern",
+    "Berlin",
+    "Brandenburg",
+    "Bremen",
+    "Hamburg",
+    "Hessen",
+    "Mecklenburg-Vorpommer",
+    "Niedersachsen",
+    "Nordrhein-Westfalen",
+    "Rheinland-Pfalz",
+    "Saarland",
+    "Sachsen",
+    "Sachsen-Anhalt",
+    "Schleswig-Holstein",
+    "Thüringen" ]
+
+
+state_names.each do |state_name|
+  state = State.new
+  state.name = state_name
+  state.save!
 end
