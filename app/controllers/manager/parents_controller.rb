@@ -7,4 +7,10 @@ class Manager::ParentsController < Manager::ResourceController
     @parents = Parent.all
     super
   end
+
+  def new
+    @kindergarten = current_user.kindergarten
+    # @parents = Parent.all
+    # super
+  end
 end

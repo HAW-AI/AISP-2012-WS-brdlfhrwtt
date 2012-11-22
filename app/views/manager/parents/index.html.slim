@@ -1,1 +1,10 @@
 h1= t('.title')
+
+- content_for :sidebar do
+  = action_on :dashboard, :show
+  = action_on :parent, :new
+
+ul.overview
+  - @parents.each do |parent|
+    li
+      = link_to parent.name, parent
