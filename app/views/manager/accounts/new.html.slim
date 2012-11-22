@@ -4,7 +4,7 @@ h1= Account.model_name.human
   = action_on :dashboard, :show
   = action_on :accounts, :index
 
-= simple_form_for @account do |f|
+= simple_form_for [@child, @account] do |f|
   = f.association :child
   = f.input :net_income
   = f.input :person_count

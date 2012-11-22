@@ -2,6 +2,7 @@ h1= @child.nick
 
 - content_for :sidebar do
   = action_on :dashboard, :show
+  = action_on [@child, :account], :new
 
 dl
   dt= Child.human_attribute_name :firstname

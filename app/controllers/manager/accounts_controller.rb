@@ -1,4 +1,11 @@
 class Manager::AccountsController < Manager::ResourceController
+  belongs_to :children, optional: true
+  belongs_to :kindergarten, optional: true
+
+  def new
+    @account = Account.new
+  end
+
   def show
     @account = Account.find(params[:id])
 
