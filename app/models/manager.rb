@@ -1,5 +1,5 @@
 class Manager < User
-  attr_accessible :name, :kindergarten_id
+  attr_accessible :name, :kindergarten_id, :email, :password
 
   belongs_to :kindergarten
   has_many :groups, :through => :kindergarten
