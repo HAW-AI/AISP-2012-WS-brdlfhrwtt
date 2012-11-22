@@ -1,0 +1,11 @@
+h1= @parent.name
+
+- content_for :sidebar do
+  = action_on :dashboard, :show
+  = action_on :child, :new
+
+h2= Child.model_name.human
+p.detail= t("children", count: @parent.children.count)
+ul.overview
+  - @parent.children.each do |child|
+    li= link_to child.name, child

@@ -46,11 +46,13 @@ Delens::Application.routes.draw do
         get :waitlist
       end
     end
-    resources :parents
+    resources :parents do
+      resources :children
+    end
     resources :children do
       resources :accounts
     end
-    resources :accounts, except: [:new, :create]
+    resources :accounts, except: [:new]
   end
 
   scope module: 'parent', constraints: { subdomain: 'parent' } do

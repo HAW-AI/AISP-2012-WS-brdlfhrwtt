@@ -10,7 +10,7 @@ dl
   dd= @account.day_care_coupon
 
   dt= Account.human_attribute_name(:child_id)
-  dd= @account.child_id
+  dd= link_to @account.child.name, @account.child
 
   dt= Account.human_attribute_name(:net_income)
   dd= @account.net_income

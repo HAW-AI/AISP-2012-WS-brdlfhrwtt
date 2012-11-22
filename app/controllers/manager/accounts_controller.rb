@@ -38,4 +38,8 @@ class Manager::AccountsController < Manager::ResourceController
 
     super
   end
+
+  def create
+    respond_with Account.create(params[:account])
+  end
 end
