@@ -4,6 +4,7 @@ h1= @group.name
   = action_on :dashboard, :show
   = action_on @group, :edit
   = action_on @group, :waitlist
+  = action_on [@group, :child], :new
 
 h2= ChildrenGroup.model_name.human
 p.detail= t("children", count: @group.children.count)

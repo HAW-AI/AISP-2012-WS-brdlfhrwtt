@@ -3,7 +3,7 @@ class Manager::AccountsController < Manager::ResourceController
   belongs_to :kindergarten, optional: true
 
   def new
-    @account = Account.new
+    @account = Account.new(child: @children)
   end
 
   def show
