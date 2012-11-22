@@ -6,5 +6,7 @@ h1= Parent.model_name.human
 
 = simple_form_for @parent do |f|
   = f.input :name
+  = f.input :email, required: true
+  = f.input :password, required: true
 
   = f.submit
