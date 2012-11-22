@@ -1,2 +1,2 @@
-class Admin::KindergartensController < ResourceController
+class Admin::KindergartensController < Admin::ResourceController
 end
