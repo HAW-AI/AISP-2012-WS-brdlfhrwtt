@@ -86,12 +86,12 @@ Rails.application.config.sorcery.configure do |config|
   config.twitter.key = ENV['TWITTER_CONSUMER_KEY']
   config.twitter.secret = ENV['TWITTER_CONSUMER_SECRET']
   config.twitter.callback_url = "http://delens.dev/oauth/callback?provider=twitter"
-  config.twitter.user_info_mapping = {username: "screen_name", email: "screen_name"}
+  config.twitter.user_info_mapping = {name: "screen_name", email: "screen_name"}
 
   config.facebook.key = ENV['FACEBOOK_CONSUMER_KEY']
   config.facebook.secret = ENV['FACEBOOK_CONSUMER_SECRET']
   config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
-  config.facebook.user_info_mapping = {username: "name", email: "name"}
+  config.facebook.user_info_mapping = {name: "name", email: "name"}
   #
   # config.github.key = ""
   # config.github.secret = ""

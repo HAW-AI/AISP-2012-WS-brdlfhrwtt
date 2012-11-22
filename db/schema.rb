@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121223050) do
+ActiveRecord::Schema.define(:version => 20121122010539) do
 
   create_table "accounts", :force => true do |t|
     t.boolean  "day_care_coupon"
@@ -108,7 +108,6 @@ ActiveRecord::Schema.define(:version => 20121121223050) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username",                               :null => false
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"

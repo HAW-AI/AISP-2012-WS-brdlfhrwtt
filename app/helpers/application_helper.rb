@@ -26,7 +26,7 @@ module ApplicationHelper
     action_on(resources, :delete)
   end
 
-  def login_provider(provider) 
+  def login_provider(provider)
     link_to provider.to_s.humanize, auth_at_provider_path(provider), class: ['login',provider]
   end
   def login_twitter
@@ -38,7 +38,7 @@ module ApplicationHelper
 
   def login_logout
     if current_user
-      link_to "logout (#{current_user.username})", logout_url, class: 'action'
+      link_to "logout (#{current_user.name})", logout_url, class: 'action'
     else
       link_to 'login', login_url, class: 'action'
     end
