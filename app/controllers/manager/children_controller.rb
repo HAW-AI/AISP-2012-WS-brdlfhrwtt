@@ -1,5 +1,3 @@
 class Manager::ChildrenController < Manager::ResourceController
-  def new
-    @child = Child.new
-  end
+  belongs_to :group, polymorphic: true, optional: true
 end

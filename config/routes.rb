@@ -41,6 +41,7 @@ Delens::Application.routes.draw do
     root to: 'dashboards#show'
     resource :dashboard
     resources :groups, shallow: true do
+      resources :children
       member do
         get :waitlist
       end

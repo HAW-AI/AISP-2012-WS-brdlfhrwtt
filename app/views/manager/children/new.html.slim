@@ -3,7 +3,7 @@ h1= Child.model_name.human
 - content_for :sidebar do
   = action_on :dashboard, :show
 
-= simple_form_for @child do |f|
+= simple_form_for [@group, @child] do |f|
   = f.input :firstname
   = f.input :lastname
   = f.input :nick
