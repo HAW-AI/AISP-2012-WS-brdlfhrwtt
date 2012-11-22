@@ -13,7 +13,7 @@ dl
   dd= link_to @account.child.name, @account.child
 
   dt= State.model_name.human
-  dd= @account.child.groups.map{|g| g.kindergarten}.map{|k| k.state}.uniq.first.name
+  dd= @state.name
 
   dt= Account.human_attribute_name(:net_income)
   dd= @account.net_income
