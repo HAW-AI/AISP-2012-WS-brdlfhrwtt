@@ -10,5 +10,6 @@ h1= Child.model_name.human
   = f.input :gender
   = f.input :born_at, :start_year => Date.today.year - 40
   = f.input :disability
+  = f.association :parent, collection: Parent.all
 
   = f.submit
