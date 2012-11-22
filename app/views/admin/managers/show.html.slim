@@ -9,4 +9,4 @@ h2= Kindergarten.model_name.human
 - if @manager.kindergarten.nil?
   p Kein Kindergarten zugewiesen.
 - else
-  = link_to Kindergarten.model_name.human, @manager.kindergarten
+  = link_to @manager.kindergarten.name, @manager.kindergarten

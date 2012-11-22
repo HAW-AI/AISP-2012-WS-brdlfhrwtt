@@ -1,4 +1,4 @@
-h1= @kindergarten.name
+h1= @kindergarten.try(:name)
 
 - content_for :sidebar do
   = action_on :parents, :index
@@ -11,5 +11,5 @@ h1= @kindergarten.name
 
 h2= t('.stats')
 ul
-  li= t('groups', count: Group.count)
-  li= t('children', count: Child.count)
+  li= t('groups', count: (@groups.count rescue 0))
+  li= t('children', count: (Child.scoped.merge(Kindergarten.first.groups).count rescue 0))

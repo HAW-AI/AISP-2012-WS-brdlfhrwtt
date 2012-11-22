@@ -3,7 +3,6 @@
 FactoryGirl.define do
   factory :manager do
     name { Faker::NameDE.name }
-    username { name }
     kindergarten
   end
 end

@@ -1,5 +1,6 @@
 class Manager::DashboardsController < Manager::BaseController
   def show
-    @kindergarten = Manager.first.kindergarten
+    @kindergarten = current_user.kindergarten
+    @groups = current_user.kindergarten.try(:groups)
   end
 end
