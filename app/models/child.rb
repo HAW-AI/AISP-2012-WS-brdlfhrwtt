@@ -5,6 +5,7 @@ class Child < ActiveRecord::Base
   has_many :groups, :through => :children_groups
   has_many :waitlists, include: :group
   has_many :waiting_groups, :through => :waitlists, :source => :group
+  has_many :accounts
   belongs_to :parent
 
   validates :nick, presence: true

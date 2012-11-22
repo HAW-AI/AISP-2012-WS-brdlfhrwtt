@@ -13,7 +13,7 @@ Delens::Application.routes.draw do
     match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
 
     resources :fees
-    resources :accounts
+
     resources :children
 
     resources :kindergartens, shallow: true do
@@ -43,6 +43,7 @@ Delens::Application.routes.draw do
     resources :groups
     resources :parents
     resources :children
+    resources :accounts
   end
 
   scope module: 'parent', constraints: { subdomain: 'parent' } do
