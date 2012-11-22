@@ -2,6 +2,10 @@ class Manager::AccountsController < Manager::ResourceController
   belongs_to :children, optional: true
   belongs_to :kindergarten, optional: true
 
+  def index
+    @accounts = Account.all
+  end
+
   def new
     @account = Account.new(child: @children)
   end
