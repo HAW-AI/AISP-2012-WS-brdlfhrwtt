@@ -36,7 +36,7 @@ class Manager::AccountsController < Manager::ResourceController
 
     @money_to_pay = @price
 
-    super
+    show!
   end
 
   def create

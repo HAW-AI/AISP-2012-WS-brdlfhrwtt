@@ -9,8 +9,11 @@ dl
   dt= Account.human_attribute_name(:day_care_coupon)
   dd= @account.day_care_coupon
 
-  dt= Account.human_attribute_name(:child_id)
+  dt= Account.human_attribute_name(:child)
   dd= link_to @account.child.name, @account.child
+
+  dt= State.model_name.human
+  dd= @account.child.groups.map{|g| g.kindergarten}.map{|k| k.state}.uniq.first.name
 
   dt= Account.human_attribute_name(:net_income)
   dd= @account.net_income
@@ -32,3 +35,4 @@ dl
 
   dt Beitrag in EUR
   dd #{number_to_currency(@price)}/Monat
+
