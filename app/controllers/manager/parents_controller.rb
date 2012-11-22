@@ -3,7 +3,6 @@ class Manager::ParentsController < Manager::ResourceController
   custom_actions :resource => :waitlist
 
   def index
-    @kindergarten = current_user.kindergarten
-    @parents = Parent.all
+    @parents = Parent.scoped
   end
 end
