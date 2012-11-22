@@ -9,3 +9,10 @@ h2= Manager.model_name.human
   p Kein Leiter zugewiesen.
 - else
   = link_to @kindergarten.manager.name, @kindergarten.manager
+
+h2= Group.model_name.human
+
+p.detail= t("groups", count: @kindergarten.groups.count)
+ul.overview
+  - @kindergarten.groups.each do |group|
+    li= link_to group.name, group
