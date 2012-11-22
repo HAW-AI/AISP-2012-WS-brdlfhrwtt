@@ -5,6 +5,5 @@ class Manager::ParentsController < Manager::ResourceController
   def index
     @kindergarten = current_user.kindergarten
     @parents = Parent.all
-    super
   end
 end
