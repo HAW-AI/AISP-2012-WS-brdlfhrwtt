@@ -11,4 +11,12 @@ private
   def not_authenticated
     redirect_to login_url, notice: 'please log in'
   end
+
+  def page_after_login
+    if current_user.is_a? Manager
+      root_url(subdomain:'manager')
+    else
+      root_url(subdomain:'parent')
+    end
+  end
 end
