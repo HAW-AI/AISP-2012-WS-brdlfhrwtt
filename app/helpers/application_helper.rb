@@ -38,7 +38,8 @@ module ApplicationHelper
 
   def login_logout
     if current_user
-      link_to "logout (#{current_user.name})", logout_url, class: 'action'
+      role = current_user.class.model_name.human
+      link_to "Angemeldet als #{current_user.name} (#{role}). Abmelden.", logout_url, class: 'action'
     else
       link_to 'login', login_url, class: 'action'
     end
