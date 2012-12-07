@@ -1,4 +1,4 @@
-class Manager::ResourceController < Parent::BaseController
+class Manager::ResourceController < Manager::BaseController
   inherit_resources
 
   def begin_of_association_chain
