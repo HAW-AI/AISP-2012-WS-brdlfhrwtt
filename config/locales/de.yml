@@ -50,6 +50,7 @@ de:
       waitlist: 'Warteliste'
       manager: 'Leiter'
       parent: 'Elternteil'
+      state: 'Bundesland'
     attributes:
       fee:
         valid_at: 'Gültig seit'
@@ -72,6 +73,23 @@ de:
         birth_sequence_position: 'Rang in Geburtenfolge'
         free_preschool_year: 'Kostenloses Vorschuljahr'
         created_at: 'Abrechnungsdatum'
+      kindergarten:
+        name: 'Name'
+        state: 'Bundesland'
+      manager:
+        name: 'Name'
+        email: 'E-Mail'
+        password: 'Passwort'
+        kindergarten: 'Kindergarten'
+      group:
+        name: 'Name'
+        limit: 'Größe'
+        starts_on: 'Beginn'
+        ends_on: 'Ende'
+      parent:
+        name: 'Name'
+        email: 'E-Mail'
+        password: 'Passwort'
 
   errors:
     messages:
