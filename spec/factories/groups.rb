@@ -8,7 +8,7 @@ FactoryGirl.define do
     starts_on { Time.parse(['6:00', '6:30', '7:00', '8:00'].sample) }
     ends_on { starts_on + (Kernel.rand(5)+3).hours }
 
-    ignore do child_count Kernel.rand(8..32) end
+    ignore do child_count 42 end
     after(:create) do |group, evaluator|
       FactoryGirl.create_list(:child, evaluator.child_count, groups: [group])
     end

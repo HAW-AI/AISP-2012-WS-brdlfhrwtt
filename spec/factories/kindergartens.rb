@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :kindergarten do
     name { Faker::Education::school_name }
 
-    ignore do groups_count Kernel.rand(2..7) end
+    ignore do groups_count 7 end
     after(:create) do |kindergarten, evaluator|
       FactoryGirl.create_list(:group, evaluator.groups_count, kindergarten: kindergarten)
     end
